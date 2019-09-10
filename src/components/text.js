@@ -4,6 +4,7 @@ const fontHeading = '"Montserrat", sans-serif'
 const fontBody = '"Rubik", sans-serif'
 
 const fontColor = '#c8d6e5'
+const linkColor = '#39ace7'
 
 const h1 = styled.h1`
     margin-top: 2rem;
