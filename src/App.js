@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from './components/header'
 
@@ -8,22 +8,25 @@ import PageCssGrid from './pages/CssGrid'
 
 function App() {
   return (
-    <Router>
-      <Header links={[
-        {
-          name: 'Flexbox',
-          to: '/'
-        },
-        {
-          name: 'CSS Grid',
-          to: '/grid'
-        }
-      ]}
+    <>
+      <Header
+        links={[
+          {
+            name: 'Flexbox',
+            to: '/'
+          },
+          {
+            name: 'CSS Grid',
+            to: '/grid'
+          }
+        ]}
       />
-      <Route path='/' exact component={PageFlexbox} />
-      <Route path='/grid' component={PageCssGrid} />
-    </Router>
-  );
+      <Router>
+        <Route path="/" exact component={PageFlexbox} />
+        <Route path="/grid" component={PageCssGrid} />
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
