@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Header from './components/header'
-import PageIndex from './pages/index'
+import PageFlexbox from './pages/Flexbox'
 
 function App() {
   return (
     <>
       <Header />
-      <PageIndex />
+      <PageFlexbox />
     </>
   );
 }

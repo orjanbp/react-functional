@@ -7,7 +7,7 @@ const Column = styled.div`
     };
     box-sizing: border-box;
     flex-shrink: 0;
-    padding: 0px 8px;
+    padding: 8px;
 `
 
 export default Column
