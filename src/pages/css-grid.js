@@ -1,34 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Page from '../components/page'
 import Text from '../components/text'
 import Outline from '../components/outline'
 
-const Grid = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-areas:
-    'head head'
-    'article side'
-    'footer footer';
-  grid-template-rows:
-    300px
-    minmax(600px, auto)
-    200px;
-  grid-template-columns: 3fr 1fr;
-`
+import Grid from '../components/grid/grid'
+import GridBox from '../components/grid/grid-box'
 
-const GridBox = styled.div`
-  box-sizing: border-box;
-  padding: 8px;
-  grid-area: ${props => (props.area ? props.area : '')};
-`
 
 const PageCssGrid = () => (
   <Page>
-    <Grid>
+    <Grid
+      areas="'head head' 'article side' 'footer footer'"
+      rows="300px minmax(600px, auto) 200px"
+      columns="3fr 1fr"
+    >
       <GridBox area="head">
         <Outline>
           <Text.p>Header</Text.p>
