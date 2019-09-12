@@ -1,48 +1,62 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 import Page from '../components/page'
 import Text from '../components/text'
+import Outline from '../components/outline'
 
 const Grid = styled.div`
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-        "a a a a a a a a a a a a"
-        "d d d d d d d . . . . ."
-        "b b b b b b b . . . . .";
-    grid-template-rows:
-        300px
-        minmax(800px, auto)
-        300px;
-    grid-template-columns: auto;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    'head head'
+    'article side'
+    'footer footer';
+  grid-template-rows:
+    300px
+    minmax(600px, auto)
+    200px;
+  grid-template-columns: 3fr 1fr;
 `
 
-const Container = styled.div`
-    grid-area: ${props => props.area ? props.area : ''};
+const GridBox = styled.div`
+  box-sizing: border-box;
+  padding: 8px;
+  grid-area: ${props => (props.area ? props.area : '')};
 `
 
 const PageCssGrid = () => (
-    <Page>
-        <Grid>
-            <Container area='d' style={{background: '#bdc3c7'}}>
-                <Text.h2>Footer Content</Text.h2>
-            </Container>
-            <Container area='a' style={{background: '#c0392b'}}>
-                <Text.h2>Banner Image</Text.h2>
-            </Container>
-            <Container area='b' style={{background: '#2980b9'}}>
-                <Text.h1>Article Content</Text.h1>
-                <Text.h2>Subheading</Text.h2>
-                <Text.p>Paragraph</Text.p>
-                <Text.p>Another Paragraph <br /> with a line break</Text.p>
-            </Container>
-            <Container area='c' style={{background: '#16a085'}}>
-                <Text.h2>Sidebar Content</Text.h2>
-            </Container>
-        </Grid>
-    </Page>
+  <Page>
+    <Grid>
+      <GridBox area="head">
+        <Outline>
+          <Text.p>Header</Text.p>
+        </Outline>
+      </GridBox>
+      <GridBox area="article">
+        <Outline>
+          <Text.p>Article</Text.p>
+          <Text.h1>Heading</Text.h1>
+          <Text.h2>Subheading</Text.h2>
+          <Text.p>Paragraph</Text.p>
+          <Text.p>
+            Another Paragraph <br /> with a line break
+          </Text.p>
+        </Outline>
+      </GridBox>
+      <GridBox area="side">
+        <Outline>
+          <Text.p>Sidebar</Text.p>
+        </Outline>
+      </GridBox>
+      <GridBox area="footer">
+        <Outline>
+          <Text.p>Footer</Text.p>
+        </Outline>
+      </GridBox>
+    </Grid>
+  </Page>
 )
 
-export default PageCssGrid;
+export default PageCssGrid
