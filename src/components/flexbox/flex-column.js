@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Column = styled.div`
+const FlexColumn = styled.div`
     width: ${props => props.col ?
         `calc(100% / (12 / ${props.col}))` :
         '100%'
@@ -10,4 +10,4 @@ const Column = styled.div`
     padding: 8px;
 `
 
-export default Column
+export default FlexColumn
