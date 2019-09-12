@@ -9,9 +9,19 @@ import PageCssGrid from './pages/CssGrid'
 function App() {
   return (
     <Router>
-      <Header />
+      <Header links={[
+        {
+          name: 'Flexbox',
+          to: '/'
+        },
+        {
+          name: 'CSS Grid',
+          to: '/grid'
+        }
+      ]}
+      />
       <Route path='/' exact component={PageFlexbox} />
-      <Route path='/grid' exact component={PageCssGrid} />
+      <Route path='/grid' component={PageCssGrid} />
     </Router>
   );
 }
