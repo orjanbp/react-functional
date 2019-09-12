@@ -1,10 +1,16 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Text from '../text'
 
-const NavLink = styled(Text.a)`
+const NavLink = styled(Link)`
   display: inline-block;
   padding: 10px 16px;
   text-decoration: none;
+  margin: 0rem;
+  color: ${Text.color.link};
+  font-family: ${Text.font.body};
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 
   &::after {
     content: '';
@@ -13,15 +19,28 @@ const NavLink = styled(Text.a)`
     left: -4px;
     width: 0px;
     height: 2px;
+    background-color: ${Text.color.link};
     margin: 2px auto 0px;
     border-radius: 1px;
     transition: width 0.2s ease-out;
   }
 
-  &:hover::after,
-  &:focus::after,
-  &:active::after {
-    width: calc(100% + 8px);
+  &:hover,
+  &:focus {
+    color: ${Text.color.linkFocus};
+
+    &::after {
+      background-color: ${Text.color.linkFocus};
+      width: calc(100% + 8px);
+    }
+  }
+
+  &:active {
+    color: ${Text.color.linkActive};
+
+    &::after {
+      background-color: ${Text.color.linkActive};
+    }
   }
 `
 

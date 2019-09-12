@@ -8,7 +8,7 @@ import PageCssGrid from './pages/css-grid'
 
 function App() {
   return (
-    <>
+    <Router>
       <Header
         links={[
           {
@@ -21,11 +21,9 @@ function App() {
           }
         ]}
       />
-      <Router>
-        <Route path="/" exact component={PageFlexbox} />
-        <Route path="/grid" component={PageCssGrid} />
-      </Router>
-    </>
+      <Route path="/" exact component={PageFlexbox} />
+      <Route path="/grid" component={PageCssGrid} />
+    </Router>
   )
 }
 

@@ -21,7 +21,7 @@ const Header = ({ links }) => (
   <HeaderOuter>
     <HeaderNav>
       {links.map(link => {
-        return <NavLink href={link.to}>{link.name}</NavLink>
+        return <NavLink to={link.to}>{link.name}</NavLink>
       })}
     </HeaderNav>
   </HeaderOuter>
