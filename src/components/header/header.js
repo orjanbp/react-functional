@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Text from '../components/text'
+
+import NavLink from './nav-link'
 
 const HeaderOuter = styled.header`
   display: flex;
@@ -14,30 +15,6 @@ const HeaderOuter = styled.header`
 
 const HeaderNav = styled.nav`
   align-self: center;
-`
-
-const NavLink = styled(Text.a)`
-  display: inline-block;
-  padding: 10px 16px;
-  text-decoration: none;
-
-  &::after {
-    content: '';
-    display: block;
-    position: relative;
-    left: -4px;
-    width: 0px;
-    height: 2px;
-    margin: 2px auto 0px;
-    border-radius: 1px;
-    transition: width 0.2s ease-out;
-  }
-
-  &:hover::after,
-  &:focus::after,
-  &:active::after {
-    width: calc(100% + 8px);
-  }
 `
 
 const Header = ({ links }) => (
