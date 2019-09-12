@@ -1,20 +1,23 @@
 import styled from 'styled-components'
 
-const fontHeading = '"Rubik", sans-serif'
-const fontBody = '"Karla", sans-serif'
+const font = {
+    heading: '"Rubik", sans-serif',
+    body: '"Karla", sans-serif'
+}
 
-const fontColor = '#c8d6e5'
-const fontColorHeading = '#eef2f7'
-
-const linkColor = '#39ace7'
-const linkColorFocus = '#bbe2f7'
-const linkColorActive = '#60bcec'
+const color = {
+    body: '#c8d6e5',
+    heading: '#eef2f7',
+    link: '#39ace7',
+    linkFocus: '#bbe2f7',
+    linkActive: '#60bcec'
+}
 
 const h1 = styled.h1`
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: ${fontColorHeading};
-  font-family: ${fontHeading};
+  color: ${color.heading};
+  font-family: ${font.heading};
   font-size: 3rem;
   line-height: 3rem;
 `
@@ -22,16 +25,16 @@ const h1 = styled.h1`
 const h2 = styled.h2`
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: ${fontColorHeading};
-  font-family: ${fontHeading};
+  color: ${color.heading};
+  font-family: ${font.heading};
   font-size: 1.5rem;
   line-height: 2.5rem;
 `
 
 const p = styled.p`
   margin: 0rem;
-  color: ${fontColor};
-  font-family: ${fontBody};
+  color: ${color.body};
+  font-family: ${font.body};
   font-size: 1.125rem;
   line-height: 1.5rem;
 
@@ -42,34 +45,36 @@ const p = styled.p`
 
 const a = styled.a`
   margin: 0rem;
-  color: ${linkColor};
-  font-family: ${fontBody};
+  color: ${color.link};
+  font-family: ${font.body};
   font-size: 1.125rem;
   line-height: 1.5rem;
 
   &::after {
-    background-color: ${linkColor};
+    background-color: ${color.link};
   }
 
   &:hover,
   &:focus {
-    color: ${linkColorFocus};
+    color: ${color.linkFocus};
 
     &::after {
-      background-color: ${linkColorFocus};
+      background-color: ${color.linkFocus};
     }
   }
 
   &:active {
-    color: ${linkColorActive};
+    color: ${color.linkActive};
 
     &::after {
-      background-color: ${linkColorActive};
+      background-color: ${color.linkActive};
     }
   }
 `
 
 const Text = {
+  font,
+  color,
   h1,
   h2,
   p,
