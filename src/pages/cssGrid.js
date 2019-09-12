@@ -23,7 +23,7 @@ const Container = styled.div`
     grid-area: ${props => props.area ? props.area : ''};
 `
 
-const CssGrid = () => (
+const PageCssGrid = () => (
     <Page>
         <Grid>
             <Container area='d' style={{background: '#bdc3c7'}}>
@@ -45,4 +45,4 @@ const CssGrid = () => (
     </Page>
 )
 
-export default CssGrid;
+export default PageCssGrid;
