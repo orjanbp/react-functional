@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Text from '../text'
 
 const NavLink = styled(Link)`
-  display: inline-block;
+  display: block;
   padding: 10px 16px;
   text-decoration: none;
   margin: 0rem;
@@ -20,7 +20,7 @@ const NavLink = styled(Link)`
     width: 0px;
     height: 2px;
     background-color: ${Text.color.link};
-    margin: 2px auto 0px;
+    margin-top: 2px;
     border-radius: 1px;
     transition: width 0.2s ease-out;
   }

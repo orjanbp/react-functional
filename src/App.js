@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Header from './components/header/header'
+import Sidebar from './components/sidebar/sidebar'
 
 import PageFlexbox from './pages/flexbox'
 import PageCssGrid from './pages/css-grid'
@@ -10,7 +10,7 @@ import PageMasonry from './pages/masonry'
 function App() {
   return (
     <Router>
-      <Header
+      <Sidebar
         links={[
           {
             name: 'Flexbox',
