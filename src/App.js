@@ -5,6 +5,7 @@ import Header from './components/header/header'
 
 import PageFlexbox from './pages/flexbox'
 import PageCssGrid from './pages/css-grid'
+import PageMasonry from './pages/masonry'
 
 function App() {
   return (
@@ -18,11 +19,16 @@ function App() {
           {
             name: 'CSS Grid',
             to: '/grid'
+          },
+          {
+            name: 'Masonry',
+            to: '/masonry'
           }
         ]}
       />
       <Route path="/" exact component={PageFlexbox} />
       <Route path="/grid" component={PageCssGrid} />
+      <Route path="/masonry" component={PageMasonry} />
     </Router>
   )
 }
