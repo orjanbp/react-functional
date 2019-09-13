@@ -11,18 +11,18 @@ import GridBox from '../components/grid/grid-box'
 const PageCssGrid = () => (
   <Page>
     <Grid
-      areas="'head head' 'article side' 'footer footer'"
-      rows="300px minmax(600px, auto) 200px"
+      areas="'header header' 'article side' 'footer footer'"
+      rows="200px minmax(500px, auto) 200px"
       columns="3fr 1fr"
     >
-      <GridBox area="head">
+      <GridBox area="header">
         <Outline>
-          <Text.p>Header</Text.p>
+          <Text.p>Header Area</Text.p>
         </Outline>
       </GridBox>
       <GridBox area="article">
         <Outline>
-          <Text.p>Article</Text.p>
+          <Text.p>Article Area</Text.p>
           <Text.h1>Heading</Text.h1>
           <Text.h2>Subheading</Text.h2>
           <Text.p>Paragraph</Text.p>
@@ -33,12 +33,12 @@ const PageCssGrid = () => (
       </GridBox>
       <GridBox area="side">
         <Outline>
-          <Text.p>Sidebar</Text.p>
+          <Text.p>Side Area</Text.p>
         </Outline>
       </GridBox>
       <GridBox area="footer">
         <Outline>
-          <Text.p>Footer</Text.p>
+          <Text.p>Footer Area</Text.p>
         </Outline>
       </GridBox>
     </Grid>
