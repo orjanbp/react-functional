@@ -23,9 +23,7 @@ const DogImageMason = ({ size }) => {
 
   return getImages
     ? getImages.message.map(image => (
-        <MasonTile height={'auto'}>
-          <MasonImage src={image} alt='A dog' style={{ width: '100%' }} />
-        </MasonTile>
+        <MasonImage src={image} alt='A dog' />
       ))
     : getErrors
 }
