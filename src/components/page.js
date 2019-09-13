@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import config from '../config'
+
 const Page = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +9,7 @@ const Page = styled.div`
     width: 100%;
     margin: auto;
     padding: 0px 8px;
-    padding-left: 248px;
+    padding-left: ${config.sidebarWidth.desktop};
     box-sizing: border-box;
 
     @media screen and (min-width:1140px) {

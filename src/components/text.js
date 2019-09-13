@@ -31,6 +31,15 @@ const h2 = styled.h2`
   line-height: 2.5rem;
 `
 
+const h3 = styled.h3`
+  margin-top: 0rem;
+  margin-bottom: 0.250rem;
+  color: ${color.heading};
+  font-family: ${font.heading};
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+`
+
 const p = styled.p`
   margin: 0rem;
   color: ${color.body};
@@ -41,6 +50,12 @@ const p = styled.p`
   & + p {
     margin-top: 1rem;
   }
+`
+
+const sub = styled(p)`
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-style: italic;
 `
 
 const a = styled.a`
@@ -77,7 +92,9 @@ const Text = {
   color,
   h1,
   h2,
+  h3,
   p,
+  sub,
   a
 }
 
