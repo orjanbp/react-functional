@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 
 import config from '../../config'
 
@@ -26,6 +26,11 @@ const NavLink = styled(Link)`
     transition: width 0.2s ease-out;
   }
 
+  &.current {
+    pointer-events: none;
+    color: ${config.color.linkFocus};
+  }
+
   &:hover,
   &:focus {
     color: ${config.color.linkFocus};
@@ -36,12 +41,12 @@ const NavLink = styled(Link)`
   }
 
   &:hover::after {
-      background-color: ${config.color.linkFocus};
-      width: calc(100% + 8px);
+    background-color: ${config.color.linkFocus};
+    width: calc(100% + 8px);
   }
 
   &:active::after {
-      background-color: ${config.color.linkActive};
+    background-color: ${config.color.linkActive};
   }
 `
 

@@ -30,7 +30,11 @@ const Sidebar = ({ links }) => (
     </Text.sub>
     <SidebarNav>
       {links.map(link => {
-        return <NavLink to={link.to}>{link.name}</NavLink>
+        return (
+          <NavLink to={link.to} activeClassName="current">
+            {link.name}
+          </NavLink>
+        )
       })}
     </SidebarNav>
   </SidebarOuter>
