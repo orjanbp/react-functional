@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import _ from 'lodash'
 
 import Sidebar from './components/sidebar/sidebar'
 
@@ -7,29 +8,37 @@ import PageFlexbox from './pages/flexbox'
 import PageCssGrid from './pages/css-grid'
 import PageMasonry from './pages/masonry'
 
+const routes = [
+  {
+    name: 'Flexbox',
+    to: '/flexbox',
+    component: PageFlexbox
+  },
+  {
+    name: 'CSS Grid',
+    to: '/grid',
+    component: PageCssGrid
+  },
+  {
+    name: 'Masonry',
+    to: '/masonry',
+    component: PageMasonry
+  }
+]
+
 function App() {
   return (
     <Router>
-      <Sidebar
-        links={[
-          {
-            name: 'Flexbox',
-            to: '/flexbox'
-          },
-          {
-            name: 'CSS Grid',
-            to: '/grid'
-          },
-          {
-            name: 'Masonry',
-            to: '/masonry'
-          }
-        ]}
+      <Sidebar links={routes} />
+      <Route
+        exact
+        path="/"
+        render={() => <Redirect to={_.first(routes).to} />}
       />
-      <Route exact path="/" render={() => <Redirect to="/flexbox" />} />
-      <Route path="/flexbox" component={PageFlexbox} />
-      <Route path="/grid" component={PageCssGrid} />
-      <Route path="/masonry" component={PageMasonry} />
+
+      {routes.map(route => (
+        <Route path={route.to} component={route.component} />
+      ))}
     </Router>
   )
 }
