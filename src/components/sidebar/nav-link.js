@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import config from '../../config'
-import Text from '../text'
 
 const NavLink = styled(Link)`
   display: block;
