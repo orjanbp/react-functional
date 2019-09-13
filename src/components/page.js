@@ -8,7 +8,7 @@ const Page = styled.div`
     height: 100%;
     width: 100%;
     margin: auto;
-    padding: 0px 8px;
+    padding: 16px 8px;
     padding-left: ${config.sidebarWidth.desktop};
     box-sizing: border-box;
 
