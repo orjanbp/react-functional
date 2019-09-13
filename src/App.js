@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 import Sidebar from './components/sidebar/sidebar'
 
@@ -14,7 +14,7 @@ function App() {
         links={[
           {
             name: 'Flexbox',
-            to: '/'
+            to: '/flexbox'
           },
           {
             name: 'CSS Grid',
@@ -26,7 +26,8 @@ function App() {
           }
         ]}
       />
-      <Route path="/" exact component={PageFlexbox} />
+      <Route exact path="/" render={() => <Redirect to="/flexbox" />} />
+      <Route path="/flexbox" component={PageFlexbox} />
       <Route path="/grid" component={PageCssGrid} />
       <Route path="/masonry" component={PageMasonry} />
     </Router>
