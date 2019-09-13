@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import Outline from '../outline'
 import MasonTile from './mason-tile'
+import MasonImage from './mason-image'
 
 const DogImageMason = ({ size }) => {
   const [getErrors, setErrors] = useState(false)
@@ -24,9 +24,7 @@ const DogImageMason = ({ size }) => {
   return getImages
     ? getImages.message.map(image => (
         <MasonTile height={'auto'}>
-          <Outline>
-            <img src={image} alt='A dog' style={{ width: '100%' }} />
-          </Outline>
+          <MasonImage src={image} alt='A dog' style={{ width: '100%' }} />
         </MasonTile>
       ))
     : getErrors

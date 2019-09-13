@@ -11,7 +11,7 @@ function getRandomBoxHeight() {
 const PageMasonry = () => (
   <Page>
     <MasonWall>
-      <DogImageMason size='10' />
+      <DogImageMason size='12' />
     </MasonWall>
   </Page>
 )
