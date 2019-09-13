@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Page from '../components/page'
 import Outline from '../components/outline'
@@ -9,7 +8,6 @@ import MasonTile from '../components/masonry/mason-tile'
 function getRandomBoxHeight() {
   return Math.floor(Math.random() * (300 - 200) + 200)
 }
-
 
 const PageMasonry = () => (
   <Page>
