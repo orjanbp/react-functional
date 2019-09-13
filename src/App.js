@@ -10,18 +10,18 @@ import PageMasonry from './pages/masonry'
 
 const routes = [
   {
-    name: 'Flexbox',
-    to: '/flexbox',
+    name: 'Layout: Flexbox',
+    to: '/flexbox-layout',
     component: PageFlexbox
   },
   {
-    name: 'CSS Grid',
-    to: '/grid',
+    name: 'Layout: CSS Grid',
+    to: '/grid-layout',
     component: PageCssGrid
   },
   {
-    name: 'Masonry',
-    to: '/masonry',
+    name: 'Layout: Masonry',
+    to: '/masonry-layout',
     component: PageMasonry
   }
 ]
