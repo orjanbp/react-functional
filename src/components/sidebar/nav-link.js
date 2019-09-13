@@ -29,19 +29,19 @@ const NavLink = styled(Link)`
   &:hover,
   &:focus {
     color: ${config.color.linkFocus};
-
-    &::after {
-      background-color: ${config.color.linkFocus};
-      width: calc(100% + 8px);
-    }
   }
 
   &:active {
     color: ${config.color.linkActive};
+  }
 
-    &::after {
+  &:hover::after {
+      background-color: ${config.color.linkFocus};
+      width: calc(100% + 8px);
+  }
+
+  &:active::after {
       background-color: ${config.color.linkActive};
-    }
   }
 `
 
